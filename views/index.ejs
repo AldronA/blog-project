@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+    <% posts.forEach(function(post) { %>
+      <div class="text-container">
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
+    <div class="d-md-flex justify-content-md-end">
+      <form action="/edit/<%= post.id %>" method="get" class="d-inline me-3">
+        <button class="btn btn-outline-primary px-4">Edit</button>
+      </form>
+      <form action="/delete/<%= post.id %>" method="post" class="d-inline">
+        <button class="red btn btn-outline-danger px-4">Delete</button>
+      </form>
+    </div></div>
+    <hr />
+
+    <% }); %>
+    <div class="text-container">
+    <h2>"Why Learning JavaScript is Worth Your Time in 2025"</h2>
+    <p>JavaScript continues to be one of the most essential programming languages in the world of web development. From building dynamic websites to creating full-stack applications, JavaScript remains at the core of modern development workflows. In 2025, with the rise of frameworks like Next.js and tools like Node.js, learning JavaScript opens doors to backend and frontend development. Whether you're a beginner or an experienced developer, investing time in mastering JavaScript is a smart move that will pay off for years to come.</p>
+    <div class="d-md-flex justify-content-md-end">
+      <form action="#" method="get" class="d-inline me-3">
+        <button button type="button" class="btn btn-outline-primary px-4">Edit</button>
+      </form>
+      
+      <form action="#" method=" " class="d-inline">
+        <button type="button" class="red btn btn-outline-danger px-4">Delete</button>
+      </form></div>
+    </div>
+
+
+    
+<%- include("partials/footer.ejs") %>
